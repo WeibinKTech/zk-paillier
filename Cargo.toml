@@ -27,19 +27,17 @@ digest = "0.9"
 thiserror = "1"
 
 [dependencies.curv-kzen]
-version = "0.9"
+git = "https://github.com/tirogen/curv.git"
+branch = "v0.9.0.1"
 default-features = false
+features = ["num-bigint"]
 
 [dependencies.paillier]
-package = "kzen-paillier"
-version = "0.4"
-default-features = false
+git = "https://github.com/tirogen/rust-paillier.git"
+branch = "v0.4.2.1"
 
 [dev-dependencies]
 criterion = "0.3"
-
-[features]
-default = ["curv-kzen/rust-gmp-kzen"]
 
 [[bench]]
 name = "all"
